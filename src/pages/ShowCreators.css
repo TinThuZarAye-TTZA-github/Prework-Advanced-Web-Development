@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f5f7;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e293b;
+}
+
+a {
+  text-decoration: none;
+}
+
+.creators-page {
+  width: 95%;
+  margin: auto;
+  padding: 25px 0 50px;
+}
+
+.creators-header {
+  height: 700px;
+  margin-bottom: 50px;
+  border-radius: 30px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../assets/image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.creators-header h1 {
+  color: white;
+  font-size: 5rem;
+  margin-bottom: 80px;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.header-links {
+  display: flex;
+  gap: 40px;
+}
+
+.header-links a,
+.header-link-btn {
+  color: white;
+  border: 2px solid white;
+  padding: 18px 35px;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: inherit;
+}
+
+.header-links a:hover,
+.header-link-btn:hover {
+  background: white;
+  color: black;
+}
+
+.creators-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+  scroll-margin-top: 30px;
+}
+
+.creator-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.creator-card:hover {
+  transform: translateY(-8px);
+}
+
+.card-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.creator-card-content {
+  padding: 25px;
+}
+
+.creator-card-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.creator-card-content p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.creator-card-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.creator-card-actions a,
+.creator-card-actions button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  background: white;
+  color: #1f2937;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.creator-card-actions a:hover,
+.creator-card-actions button:hover {
+  background: #1f2937;
+  color: white;
+}
+
+.creator-card-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .creators-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .creators-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .header-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header-links a,
+  .header-link-btn {
+    width: 260px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .creators-page {
+    width: 92%;
+  }
+
+  .creators-header {
+    height: 360px;
+    padding: 20px;
+  }
+
+  .creators-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+  }
+
+  .header-links a,
+  .header-link-btn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 22px;
+  }
+
+  .card-image {
+    height: 240px;
+  }
+
+  .creator-card-actions {
+    flex-direction: column;
+  }
+
+  .creator-card-actions a,
+  .creator-card-actions button {
+    width: 100%;
+    text-align: center;
+  }
+}

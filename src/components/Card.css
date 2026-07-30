@@ -1,0 +1,27 @@
+.creator-social-icons {
+  display: flex;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.creator-social-icons a {
+  font-size: 2rem;
+  color: #1f2937;
+  transition: 0.3s;
+}
+
+.creator-social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.creator-social-icons a:first-child:hover {
+  color: red;
+}
+
+.creator-social-icons a:nth-child(2):hover {
+  color: #E1306C;
+}
+
+.creator-social-icons a:nth-child(3):hover {
+  color: #1DA1F2;
+}
